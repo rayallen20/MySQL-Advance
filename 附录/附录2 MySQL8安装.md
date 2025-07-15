@@ -1,6 +1,6 @@
-# 附录-MySQL8安装
+# 附录2 MySQL8安装
 
-## 1. 安装
+## STEP1. 安装
 
 ```
 sudo apt update
@@ -8,14 +8,14 @@ sudo apt upgrade -y
 sudo apt install mysql-server -y
 ```
 
-## 2. 检测
+## STEP2. 检测
 
 ```
 root@mysql-master:~# mysql --version
 mysql  Ver 8.0.42-0ubuntu0.22.04.2 for Linux on x86_64 ((Ubuntu))
 ```
 
-## 3. 启动并设置开机自启动
+## STEP3. 启动并设置开机自启动
 
 ```
 root@mysql-master:~# sudo systemctl enable mysql
@@ -27,7 +27,7 @@ Executing: /lib/systemd/systemd-sysv-install enable mysql
 root@mysql-master:~# sudo systemctl start mysql
 ```
 
-## 4. 检查状态
+## STEP4. 检查状态
 
 ```
 root@mysql-master:~# sudo systemctl status mysql
@@ -46,7 +46,7 @@ Jul 14 02:08:00 mysql-master systemd[1]: Starting MySQL Community Server...
 Jul 14 02:08:01 mysql-master systemd[1]: Started MySQL Community Server.
 ```
 
-## 5. 安全初始化
+## STEP5. 安全初始化
 
 ```
 root@mysql-master:~# sudo mysql_secure_installation
@@ -121,7 +121,7 @@ Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
 
 - 选是即可
 
-## 6. 设置允许远程登录
+## STEP6. 设置允许远程登录
 
 ### 6.1 设置密码
 
